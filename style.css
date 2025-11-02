@@ -1,0 +1,364 @@
+﻿:root {
+    /* color palette, darkest to lightest */
+    --cafenoir: #52412B;
+    --chamoisee: #9f7f54;
+    --lion: #c09a65;
+    --earth-yellow: #e8ba7a;
+    --sunset: #ffcd86;
+    --cream: #ffd69b;
+}
+
+/* Defualt Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--chamoisee);
+    line-height: 1.6;
+    
+}
+
+.highlighed
+{
+  background-color: #000000;
+}
+
+
+/* Header */
+header {
+    text-align: center;
+    background-color: var(--cafenoir);
+    padding: 1rem;
+}
+
+h1 {
+    color: var(--cream);
+    font-size: 2.5rem;
+}
+
+.hero-text h1 {
+  color: var(--cream);
+  font-size: 1.8rem;
+}
+
+h2 {
+  color: var(--cafenoir);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h3 {
+  color: var(--cafenoir);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+p {
+  color: var(--cafenoir);
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--earth-yellow);
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--lion);
+    text-decoration: underline;
+}
+
+address {
+  color: var(--cafenoir);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    height: 50vh;
+    max-height: 500px;
+    background-image: url(images/cat_coffee_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--cream);
+    object-fit: cover;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.4); /* slight overlay to make it easier to see */
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Menu Highlights */
+.menu-highlights {
+    padding: 1rem;
+}
+
+.menu-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--earth-yellow);
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 200px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* About/Location */
+.about-location {
+    padding: 1rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.about-container {
+  border: #52412B;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 1rem;
+}
+
+.contact-form form {
+    width: 100%;
+      padding-left: 1rem;
+  padding-right: 1rem;
+}
+.form-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+  align-items: start;
+}
+
+.form-row label {
+  font-weight: 800;
+  color: var(--cafenoir);
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid var(--chamoisee);
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.form-grid > .form-row {
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.form-row button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--chamoisee);
+}
+
+.submit-row button {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--cafenoir);
+  color: var(--cream);
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    background-color: var(--chamoisee);
+    color: var(--sunset);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--cafenoir);
+    color: var(--cream);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: var(--earth-yellow);
+    text-decoration: none;
+    margin: 0 0.25rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--chamoisee);
+    text-decoration: underline;
+}
+
+footer p {
+  color: var(--cream);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablet*/
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .menu-cards {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: left;
+    }
+
+    /* label and input side-by-side for each form-row */
+  .form-row {
+    grid-template-columns: 160px 1fr;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  /* Left-align the label to line them up */
+  .form-row label {
+    justify-self: start;
+    text-align: left;
+    padding-right: 0.5rem;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+  }
+
+  .row-pair {
+    display: grid;
+    grid-template-columns: 1fr; /* stacked */
+    gap: 0.75rem;
+  }
+
+  .submit-row button {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+
+/* Desktop*/
+@media (min-width: 1024px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .menu-cards {
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 calc(33.33% - 1.5rem);
+    }
+    .about-location {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+    .about-content p {
+        width: 80%;
+    }
+
+    /* Make the name+email pair in two columns */
+  .row-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .row-pair .form-row {
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+  }
+
+  .submit-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  .submit-row button {
+    width: auto;
+    min-width: 160px;
+    padding: 0.7rem 1rem;
+  }
+}
