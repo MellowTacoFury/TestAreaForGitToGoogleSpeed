@@ -95,7 +95,7 @@ address {
     min-height: 200px;
     height: 50vh;
     max-height: 500px;
-    background-image: url(images/cat_coffee_banner.avif);
+    background-image: url(images/cat_coffee_banner.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
